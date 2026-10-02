@@ -1,0 +1,821 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+<title>
+Digital Asset Passport | ReserveChain
+</title>
+
+
+<link rel="stylesheet" href="css/style.css">
+
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+
+
+<style>
+
+
+.passport-hero{
+
+
+min-height:65vh;
+
+
+background:
+
+linear-gradient(
+90deg,
+rgba(0,0,0,.9),
+rgba(0,0,0,.5)
+),
+
+url("images/background.jpg");
+
+
+
+background-size:cover;
+
+background-position:center;
+
+
+display:flex;
+
+align-items:center;
+
+padding:8%;
+
+
+}
+
+
+
+.passport-title{
+
+
+max-width:700px;
+
+
+}
+
+
+.passport-title h1{
+
+
+font-size:65px;
+
+color:#D4AF37;
+
+
+}
+
+
+
+.passport-title p{
+
+
+font-size:20px;
+
+line-height:1.7;
+
+color:#ddd;
+
+margin-top:20px;
+
+
+}
+
+
+
+
+
+.dashboard-section{
+
+
+padding:100px 8%;
+
+background:#050505;
+
+
+}
+
+
+
+
+
+.passport-card{
+
+
+max-width:1100px;
+
+margin:auto;
+
+
+background:
+
+linear-gradient(
+145deg,
+#151515,
+#080808
+);
+
+
+border:1px solid #333;
+
+border-radius:30px;
+
+
+padding:45px;
+
+
+box-shadow:
+
+0 20px 50px rgba(0,0,0,.5);
+
+
+}
+
+
+
+
+.passport-header{
+
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+border-bottom:1px solid #333;
+
+padding-bottom:25px;
+
+margin-bottom:35px;
+
+
+}
+
+
+
+.passport-header h2{
+
+
+font-size:32px;
+
+
+color:#D4AF37;
+
+
+}
+
+
+
+.verified{
+
+
+background:#148f4d;
+
+padding:10px 20px;
+
+border-radius:25px;
+
+font-weight:700;
+
+
+}
+
+
+
+
+
+.data-grid{
+
+
+display:grid;
+
+grid-template-columns:repeat(3,1fr);
+
+gap:25px;
+
+
+}
+
+
+
+
+.data-box{
+
+
+background:#101010;
+
+padding:25px;
+
+border-radius:18px;
+
+
+border:1px solid #222;
+
+
+}
+
+
+
+.data-box h3{
+
+
+color:#D4AF37;
+
+font-size:15px;
+
+margin-bottom:12px;
+
+
+}
+
+
+
+.data-box p{
+
+
+font-size:18px;
+
+color:white;
+
+
+}
+
+
+
+
+.timeline{
+
+
+margin-top:50px;
+
+
+}
+
+
+
+.timeline h2{
+
+
+color:#D4AF37;
+
+margin-bottom:30px;
+
+
+}
+
+
+
+.step{
+
+
+display:flex;
+
+gap:20px;
+
+align-items:center;
+
+margin-bottom:20px;
+
+
+}
+
+
+
+
+.circle{
+
+
+width:35px;
+
+height:35px;
+
+background:#D4AF37;
+
+color:#111;
+
+border-radius:50%;
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+font-weight:bold;
+
+
+}
+
+
+
+
+
+.mobile-preview{
+
+
+padding:100px 8%;
+
+background:#0b0b0b;
+
+text-align:center;
+
+
+}
+
+
+
+.phone{
+
+
+width:320px;
+
+margin:40px auto;
+
+background:#111;
+
+border-radius:35px;
+
+padding:25px;
+
+border:5px solid #222;
+
+
+}
+
+
+
+.phone-screen{
+
+
+background:#050505;
+
+border-radius:25px;
+
+padding:30px;
+
+
+}
+
+
+
+
+
+@media(max-width:768px){
+
+
+.passport-title h1{
+
+font-size:40px;
+
+}
+
+
+.data-grid{
+
+grid-template-columns:1fr;
+
+}
+
+
+.passport-header{
+
+flex-direction:column;
+
+gap:20px;
+
+}
+
+
+}
+
+
+
+</style>
+
+
+</head>
+
+
+<body>
+
+
+
+<!-- HEADER -->
+
+
+<header class="header">
+
+
+<div class="logo">
+
+<img src="images/logo.png">
+
+</div>
+
+
+
+<nav>
+
+
+<a href="index.html">
+Home
+</a>
+
+
+<a href="copper-asset.html">
+Assets
+</a>
+
+
+<a href="verification.html">
+Verification
+</a>
+
+
+<a href="passport.html">
+Passport
+</a>
+
+
+
+</nav>
+
+
+<button class="gold-btn">
+
+Connect
+
+</button>
+
+
+</header>
+
+
+
+
+
+
+
+<!-- HERO -->
+
+
+<section class="passport-hero">
+
+
+<div class="passport-title">
+
+
+<h1>
+Digital Asset Passport
+</h1>
+
+
+<p>
+
+A secure digital identity connecting verified physical assets with transparent ownership records.
+
+</p>
+
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+
+
+<!-- DASHBOARD -->
+
+
+<section class="dashboard-section">
+
+
+
+<div class="passport-card">
+
+
+
+<div class="passport-header">
+
+
+<h2>
+Asset Passport
+</h2>
+
+
+<div class="verified">
+
+✓ Verified Asset
+
+</div>
+
+
+</div>
+
+
+
+
+
+<div class="data-grid">
+
+
+
+<div class="data-box">
+
+<h3>
+Asset ID
+</h3>
+
+<p>
+RC-CU-0004512
+</p>
+
+</div>
+
+
+
+
+<div class="data-box">
+
+<h3>
+Material
+</h3>
+
+<p>
+Ultra Fine Copper Powder
+</p>
+
+</div>
+
+
+
+
+<div class="data-box">
+
+<h3>
+Purity
+</h3>
+
+<p>
+99.9999%
+</p>
+
+</div>
+
+
+
+
+<div class="data-box">
+
+<h3>
+Laboratory
+</h3>
+
+<p>
+IGAS Research
+</p>
+
+</div>
+
+
+
+
+<div class="data-box">
+
+<h3>
+Certificate
+</h3>
+
+<p>
+Verified
+</p>
+
+</div>
+
+
+
+
+<div class="data-box">
+
+<h3>
+Custody Status
+</h3>
+
+<p>
+Secure Storage
+</p>
+
+</div>
+
+
+
+
+</div>
+
+
+
+
+
+
+<div class="timeline">
+
+
+<h2>
+Verification Journey
+</h2>
+
+
+
+<div class="step">
+
+<div class="circle">
+1
+</div>
+
+<p>
+Physical Asset Registered
+</p>
+
+</div>
+
+
+
+
+<div class="step">
+
+<div class="circle">
+2
+</div>
+
+<p>
+Laboratory Verification Completed
+</p>
+
+</div>
+
+
+
+
+<div class="step">
+
+<div class="circle">
+3
+</div>
+
+<p>
+Digital Passport Created
+</p>
+
+</div>
+
+
+
+<div class="step">
+
+<div class="circle">
+4
+</div>
+
+<p>
+Blockchain Record Ready
+</p>
+
+</div>
+
+
+
+
+</div>
+
+
+
+</div>
+
+
+
+</section>
+
+
+
+
+
+
+
+<!-- MOBILE CONCEPT -->
+
+
+<section class="mobile-preview">
+
+
+<h2>
+
+Mobile Asset Passport Preview
+
+</h2>
+
+
+
+<div class="phone">
+
+
+<div class="phone-screen">
+
+
+<h3>
+ReserveChain
+</h3>
+
+
+<br>
+
+
+<p>
+Asset:
+Copper Powder
+</p>
+
+
+<br>
+
+
+<p>
+Status:
+✓ Verified
+</p>
+
+
+<br>
+
+
+<button class="gold-btn">
+
+View Record
+
+</button>
+
+
+</div>
+
+
+</div>
+
+
+
+</section>
+
+
+
+
+
+
+
+<footer>
+
+
+<div class="footer-logo">
+
+<img src="images/logo.png">
+
+</div>
+
+
+
+<p>
+OWN | TRADE | REDEEM
+</p>
+
+
+
+<p class="copyright">
+
+© 2026 ReserveChain.io | All Rights Reserved | Developed By Nazmul |
+
+</p>
+
+
+
+</footer>
+
+
+
+</body>
+
+</html>

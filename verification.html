@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+<title>
+Certificate Verification | ReserveChain
+</title>
+
+
+<link rel="stylesheet" href="css/style.css">
+
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+
+<style>
+
+
+.verify-hero{
+
+
+height:70vh;
+
+
+background:
+
+linear-gradient(
+90deg,
+rgba(0,0,0,.85),
+rgba(0,0,0,.45)
+),
+
+url("images/background.jpg");
+
+
+
+background-size:cover;
+
+background-position:center;
+
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+
+text-align:center;
+
+
+}
+
+
+
+.verify-hero h1{
+
+
+font-size:65px;
+
+color:#D4AF37;
+
+
+}
+
+
+
+.verify-hero p{
+
+
+font-size:20px;
+
+color:#ddd;
+
+max-width:700px;
+
+margin:25px auto;
+
+
+}
+
+
+
+
+
+.verify-container{
+
+
+padding:100px 8%;
+
+background:#0b0b0b;
+
+
+}
+
+
+
+
+.search-box{
+
+
+max-width:750px;
+
+margin:auto;
+
+
+background:
+
+rgba(255,255,255,.05);
+
+
+padding:45px;
+
+
+border-radius:25px;
+
+
+border:1px solid #333;
+
+
+text-align:center;
+
+
+}
+
+
+
+
+.search-box input{
+
+
+width:100%;
+
+padding:18px;
+
+background:#050505;
+
+border:1px solid #555;
+
+border-radius:10px;
+
+color:white;
+
+font-size:16px;
+
+
+margin:25px 0;
+
+
+}
+
+
+
+
+.result-card{
+
+
+margin-top:60px;
+
+
+background:#111;
+
+
+padding:40px;
+
+
+border-radius:25px;
+
+
+border:1px solid #D4AF37;
+
+
+display:grid;
+
+
+grid-template-columns:repeat(2,1fr);
+
+
+gap:25px;
+
+
+}
+
+
+
+.result-item{
+
+
+background:#171717;
+
+
+padding:25px;
+
+
+border-radius:15px;
+
+
+}
+
+
+
+.result-item h3{
+
+
+color:#D4AF37;
+
+margin-bottom:10px;
+
+
+}
+
+
+
+.status{
+
+
+display:inline-block;
+
+background:#1c9c55;
+
+color:white;
+
+padding:8px 18px;
+
+border-radius:20px;
+
+
+}
+
+
+
+.document-section{
+
+
+padding:100px 8%;
+
+background:#050505;
+
+text-align:center;
+
+
+}
+
+
+
+.document-grid{
+
+
+display:grid;
+
+grid-template-columns:repeat(3,1fr);
+
+gap:30px;
+
+margin-top:50px;
+
+
+}
+
+
+
+.document-card{
+
+
+background:#111;
+
+padding:35px;
+
+border-radius:20px;
+
+
+border:1px solid #222;
+
+
+}
+
+
+
+.document-card h3{
+
+color:#D4AF37;
+
+margin-bottom:15px;
+
+}
+
+
+
+
+@media(max-width:768px){
+
+
+.verify-hero h1{
+
+font-size:40px;
+
+}
+
+
+
+.result-card{
+
+grid-template-columns:1fr;
+
+}
+
+
+
+.document-grid{
+
+grid-template-columns:1fr;
+
+}
+
+
+}
+
+
+
+</style>
+
+
+</head>
+
+
+
+<body>
+
+
+
+<!-- HEADER -->
+
+
+<header class="header">
+
+
+<div class="logo">
+
+<img src="images/logo.png">
+
+</div>
+
+
+<nav>
+
+<a href="index.html">
+Home
+</a>
+
+
+<a href="copper-asset.html">
+Assets
+</a>
+
+
+<a href="#">
+Passport
+</a>
+
+
+<a href="verification.html">
+Verification
+</a>
+
+
+</nav>
+
+
+<button class="gold-btn">
+Join Waitlist
+</button>
+
+
+</header>
+
+
+
+
+
+
+
+<!-- HERO -->
+
+
+<section class="verify-hero">
+
+
+<div>
+
+
+<h1>
+Certificate Verification
+</h1>
+
+
+<p>
+
+Verify the authenticity and documentation history of real-world assets.
+
+</p>
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+
+
+<!-- SEARCH -->
+
+
+<section class="verify-container">
+
+
+<div class="search-box">
+
+
+<h2>
+
+Verify Your Asset
+
+</h2>
+
+
+
+<p>
+
+Enter your certificate identification number.
+
+</p>
+
+
+
+<input 
+type="text"
+placeholder="Example: RC-CU-0004512"
+>
+
+
+
+<button class="gold-btn">
+
+Verify Now
+
+</button>
+
+
+
+<div class="result-card">
+
+
+<div class="result-item">
+
+<h3>
+Asset Status
+</h3>
+
+<span class="status">
+
+Verified
+
+</span>
+
+
+</div>
+
+
+
+
+<div class="result-item">
+
+<h3>
+Asset Type
+</h3>
+
+<p>
+Ultra Fine Copper Powder
+</p>
+
+
+</div>
+
+
+
+
+<div class="result-item">
+
+<h3>
+Laboratory
+</h3>
+
+<p>
+IGAS Research
+</p>
+
+
+</div>
+
+
+
+
+<div class="result-item">
+
+<h3>
+Certificate
+</h3>
+
+<p>
+Certificate of Analysis Available
+</p>
+
+
+</div>
+
+
+
+</div>
+
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+
+<!-- DOCUMENTS -->
+
+
+<section class="document-section">
+
+
+<h2>
+
+Verification Records
+
+</h2>
+
+
+<p>
+
+Transparent documentation for every certified asset.
+
+</p>
+
+
+
+
+<div class="document-grid">
+
+
+
+<div class="document-card">
+
+
+<h3>
+Laboratory Report
+</h3>
+
+
+<p>
+Independent material analysis documentation.
+</p>
+
+
+</div>
+
+
+
+
+<div class="document-card">
+
+
+<h3>
+Asset Record
+</h3>
+
+
+<p>
+Digital identity and ownership information.
+</p>
+
+
+</div>
+
+
+
+
+<div class="document-card">
+
+
+<h3>
+Custody Record
+</h3>
+
+
+<p>
+Secure asset tracking framework.
+</p>
+
+
+</div>
+
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+<footer>
+
+
+<div class="footer-logo">
+
+<img src="images/logo.png">
+
+</div>
+
+
+<p>
+
+THE INFRASTRUCTURE FOR REAL-WORLD ASSETS
+
+</p>
+
+
+<p class="copyright">
+
+© 2026 ReserveChain.io | All Rights Reserved | Developed By Nazmul |
+
+</p>
+
+
+
+</footer>
+
+
+
+</body>
+
+</html>
